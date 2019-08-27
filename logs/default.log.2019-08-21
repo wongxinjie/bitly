@@ -1,0 +1,52 @@
+2019-08-21 10:55:07 werkzeug INFO _internal.py 122 #:  * Restarting with stat
+2019-08-21 11:02:16 werkzeug INFO _internal.py 122 #:  * Detected change in '/Users/wongxinjie/projects/bitly/app.py', reloading
+2019-08-21 11:02:16 werkzeug INFO _internal.py 122 #:  * Restarting with stat
+2019-08-21 11:02:23 werkzeug INFO _internal.py 122 #:  * Restarting with stat
+2019-08-21 11:03:56 werkzeug INFO _internal.py 122 #:  * Detected change in '/Users/wongxinjie/projects/bitly/app.py', reloading
+2019-08-21 11:03:56 werkzeug INFO _internal.py 122 #:  * Restarting with stat
+2019-08-21 11:07:18 werkzeug INFO _internal.py 122 #:  * Detected change in '/Users/wongxinjie/projects/bitly/service/session.py', reloading
+2019-08-21 11:07:18 werkzeug INFO _internal.py 122 #:  * Restarting with stat
+2019-08-21 11:28:20 werkzeug INFO _internal.py 122 #:  * Restarting with stat
+2019-08-21 11:28:36 root ERROR app.py 93 #: 'NoneType' object has no attribute 'verify_password'
+Traceback (most recent call last):
+  File "/Users/wongxinjie/.virtualenvs/bitly/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wongxinjie/.virtualenvs/bitly/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wongxinjie/projects/bitly/api/account.py", line 51, in api_login_via_password
+    ok = user.verify_password(password)
+AttributeError: 'NoneType' object has no attribute 'verify_password'
+2019-08-21 11:30:12 werkzeug INFO _internal.py 122 #:  * Detected change in '/Users/wongxinjie/projects/bitly/api/account.py', reloading
+2019-08-21 11:30:12 werkzeug INFO _internal.py 122 #:  * Restarting with stat
+2019-08-21 11:30:24 werkzeug INFO _internal.py 122 #:  * Restarting with stat
+2019-08-21 11:30:56 root ERROR app.py 93 #: set() missing 3 required positional arguments: 'px', 'nx', and 'xx'
+Traceback (most recent call last):
+  File "/Users/wongxinjie/.virtualenvs/bitly/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wongxinjie/.virtualenvs/bitly/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wongxinjie/.virtualenvs/bitly/lib/python3.7/site-packages/flask_login/utils.py", line 259, in decorated_view
+    elif not current_user.is_authenticated:
+  File "/Users/wongxinjie/.virtualenvs/bitly/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/wongxinjie/.virtualenvs/bitly/lib/python3.7/site-packages/werkzeug/local.py", line 307, in _get_current_object
+    return self.__local()
+  File "/Users/wongxinjie/.virtualenvs/bitly/lib/python3.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/wongxinjie/.virtualenvs/bitly/lib/python3.7/site-packages/flask_login/utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/wongxinjie/.virtualenvs/bitly/lib/python3.7/site-packages/flask_login/login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "/Users/wongxinjie/.virtualenvs/bitly/lib/python3.7/site-packages/flask_login/login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/wongxinjie/projects/bitly/app.py", line 66, in load_user
+    return Session.load_user(user_id)
+  File "/Users/wongxinjie/projects/bitly/service/session.py", line 43, in load_user
+    cache.set(key, user_data, ex=3600)
+TypeError: set() missing 3 required positional arguments: 'px', 'nx', and 'xx'
+2019-08-21 11:31:32 werkzeug INFO _internal.py 122 #:  * Detected change in '/Users/wongxinjie/projects/bitly/cache/__init__.py', reloading
+2019-08-21 11:31:32 werkzeug INFO _internal.py 122 #:  * Restarting with stat
+2019-08-21 11:31:38 werkzeug INFO _internal.py 122 #:  * Restarting with stat
+2019-08-21 11:32:37 werkzeug INFO _internal.py 122 #:  * Restarting with stat
+2019-08-21 11:32:58 werkzeug INFO _internal.py 122 #:  * Detected change in '/Users/wongxinjie/projects/bitly/service/session.py', reloading
+2019-08-21 11:32:58 werkzeug INFO _internal.py 122 #:  * Restarting with stat

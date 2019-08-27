@@ -1,0 +1,73 @@
+project:
+  name: 'bitly'
+  mode: 'dev'
+  server: '127.0.0.1'
+
+app:
+  debug: 1
+  secret_key: 'v/UlRB1JdFhCSSujn3o0ZOeJ1oty5gZLQTef8xqPCFg='
+  session_cookie_domain:
+  remember_cookie_domain:
+
+  host: '127.0.0.1'
+  port: 6000
+
+api:
+  toggle_api: true
+  toggle_tp_api: true
+  toggle_internal_api: true
+
+  tp_salt: ''
+  internal_salt: 'bitly'
+
+health_check:
+  open: 0
+  path: '/internal-api/health-check'
+  env_path: '/internal-api/app-status'
+
+mysql:
+  host: '127.0.0.1'
+  port: 3306
+  user: 'root'
+  password: ''
+  db: 'bitly'
+  encoding: 'utf8mb4'
+  echo: 0
+  pool_size: 100
+
+
+redis:
+  host: '127.0.0.1'
+  port: 6379
+  password: ''
+  db: 2
+  uri: 'redis://127.0.0.1:6379/0'
+
+mongodb:
+    host: '127.0.0.1:27017'
+    db: 'bitly'
+    is_auth: 0
+    user: ''
+    password: ''
+    is_replica: 0
+    replica: ''
+
+es:
+  hosts: '127.0.0.1:9200'
+  index_prefix: 'bitly'
+
+sentry:
+  sdn: ''
+
+elk_apm:
+  secret_key: ''
+
+celery:
+   broker: 'redis://localhost:6379/0'
+
+
+log:
+  log_dir: './logs'
+
+
+domain: 'http://127.0.0.1:6000'
